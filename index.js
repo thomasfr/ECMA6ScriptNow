@@ -1,11 +1,9 @@
 'use strict';
 var System = require('systemjs');
+// https://github.com/google/traceur-compiler/blob/master/src/Options.js#L25-L70
 System.traceurOptions = {
   properTailCalls: true,
-  symbols: true,
   arrayComprehension: true,
-  asyncFunctions: true,
-  forOn: true,
   generatorComprehension: true
 };
 System.config({

@@ -36,12 +36,18 @@ nums.forEach(v => {
   }
 });
 
-console.log(fives);
+console.log(`Odds: ${odds}`);
+console.log(`Nums: ${nums}`);
+console.log("This also works now %j", fives);
 
 // Lexical this
 var bob = {
   _name: "Bob",
-  _friends: ["Foo", "bar", "Jack"],
+  _friends: [
+    "Foo",
+    "Bar",
+    "Jack"
+  ],
   printFriends() {
     this._friends.forEach(f =>
       console.log(this._name + " knows " + f));
@@ -50,3 +56,51 @@ var bob = {
 
 
 bob.printFriends();
+
+let customers = [
+  {
+    city: "Vienna",
+    name: "forty-two.io",
+    age: 1
+  },
+  {
+    city: "Vienna",
+    name: "Red Bull",
+    age: 30
+  },
+  {
+    city: "Seattle",
+    name: "Acme",
+    age: 100
+  }
+];
+
+// Array comprehensions
+var results = [
+  for(c of customers)
+  if (c.city == "Vienna")
+{
+  name: c.name,
+  age: c.age
+}
+  ];
+console.log(results);
+
+// User code of Array subclass
+class MyArray extends Array {
+  constructor(...args) {
+    super(...args);
+  }
+
+  getSecond(){
+    return this[1];
+  }
+}
+
+var arr = new MyArray();
+arr.push("foo");
+arr.push(12);
+console.log(arr.length == 2);
+console.log(arr.getSecond());
+console.log(arr instanceof MyArray);
+console.log(arr instanceof Array); // WAAT
