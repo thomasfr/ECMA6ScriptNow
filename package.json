@@ -1,0 +1,15 @@
+{
+  "name": "ecma6scriptnow",
+  "version": "1.0.0",
+  "description": "Example on how to use ECMA6 today with io.js and some little help of Systemjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Fritz <thomas.fritz@forty-two.io>",
+  "license": "MIT",
+  "dependencies": {
+    "systemjs": "^0.15.0"
+  },
+  "devDependencies": {}
+}
