@@ -4,6 +4,6 @@ Small Example on how to use ECMA6 Script including classes and the new module sy
 and System.js without the need of transpiling to ES5.
 
 ```
-iojs --harmony_classes index.js
+iojs index.js
 ```
 
