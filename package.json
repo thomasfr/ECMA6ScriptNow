@@ -9,6 +9,7 @@
   "author": "Thomas Fritz <thomas.fritz@forty-two.io>",
   "license": "MIT",
   "dependencies": {
+    "babel": "^4.7.12",
     "systemjs": "^0.15.0"
   },
   "devDependencies": {}

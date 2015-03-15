@@ -26,8 +26,8 @@ let evens = [
   20
 ];
 
-var odds = evens.map(v => v + 1);
-var nums = evens.map((v, i) => v + i);
+const odds = evens.map(v => v + 1);
+const nums = evens.map((v, i) => v + i);
 let fives = [];
 // Statement bodies
 nums.forEach(v => {
@@ -41,7 +41,7 @@ console.log(`Nums: ${nums}`);
 console.log("This also works now %j", fives);
 
 // Lexical this
-var bob = {
+let bob = {
   _name: "Bob",
   _friends: [
     "Foo",
@@ -50,41 +50,11 @@ var bob = {
   ],
   printFriends() {
     this._friends.forEach(f =>
-      console.log(this._name + " knows " + f));
+      console.log(`${this._name} knows ${f}`));
   }
 };
-
-
 bob.printFriends();
 
-let customers = [
-  {
-    city: "Vienna",
-    name: "forty-two.io",
-    age: 1
-  },
-  {
-    city: "Vienna",
-    name: "Red Bull",
-    age: 30
-  },
-  {
-    city: "Seattle",
-    name: "Acme",
-    age: 100
-  }
-];
-
-// Array comprehensions
-var results = [
-  for(c of customers)
-  if (c.city == "Vienna")
-{
-  name: c.name,
-  age: c.age
-}
-  ];
-console.log(results);
 
 // User code of Array subclass
 class MyArray extends Array {
@@ -92,15 +62,15 @@ class MyArray extends Array {
     super(...args);
   }
 
-  getSecond(){
+  getSecond() {
     return this[1];
   }
 }
 
-var arr = new MyArray();
+let arr = new MyArray();
 arr.push("foo");
 arr.push(12);
 console.log(arr.length == 2);
 console.log(arr.getSecond());
-console.log(arr instanceof MyArray);
-console.log(arr instanceof Array); // WAAT
+console.log(arr instanceof MyArray); // true
+console.log(arr instanceof Array); // true WAAT
