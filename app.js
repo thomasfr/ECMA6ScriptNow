@@ -1,7 +1,6 @@
 'use strict';
 
 // No Transpiling required for this
-// iojs --harmony_classes src/tests/ecma6/
 
 import Piece from 'lib/Piece';
 import MasterPiece from 'lib/MasterPiece';
